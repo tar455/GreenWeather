@@ -5,29 +5,33 @@ const ejs=require('ejs');
 const port=process.env.PORT ||3000;
 
 
-const staptah=path.join(__dirname,'../views');
-
-app.use('/public',express.static(staptah));
+const staptah=path.join(__dirname,'../templates/views');
+// app.use('/public',express.static(staptah));
 app.use('/images',express.static(path.join(__dirname,'../images')));
+app.use('/partials',express.static(path.join(__dirname,'../templates/partials')));
+app.use(express.static(path.join(__dirname,'../public')));
+// app.use(express.static(path.join(__dirname,'../public/js')))
+
 app.set('view engine','ejs');
+app.set('views',staptah);
 //app.set('views',staptah);
 // Set HTML engine**
 
 
-app.engine('html', require('ejs').renderFile);
+//app.engine('html', require('ejs').renderFile);
 app.get('/',(req,res)=>{
-    res.render('index.html')
+    res.render('index.ejs',{list:"lists"})
 });
 
 app.get('/about',(req,res)=>{
-    res.render('about.html')
+    res.render('about.ejs',{list:"lists"})
 })
 app.get('/weather',(req,res)=>{
-    res.render('weather.html')
+    res.render('weather.ejs',{list:"lists"})
 })
-app.get('*',(req,res)=>{
-    res.send("404 not found");
-})
+// app.get('*',(req,res)=>{
+//     res.send("404 not found");
+// })
 
 app.listen(port,()=>{
     console.log(`Server running ${port}`);
