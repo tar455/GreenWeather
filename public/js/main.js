@@ -59,13 +59,10 @@ const getInfo=async(event)=>{
         outputcityName.innerHTML=arrdata[0].list[0].name;
         temp.innerHTML=parseFloat(centi).toFixed(1);
         temp_status=arrdata[0].list[0].weather[0].main;
-        console.log(temp_status)
-        if (temp_status=="Clouds"){
-            temp_status.innerHTML=`<i class="fas fa-cloud"></i>`;
-        }
-        else if(temp_status=="Clear"){
-            temp_status.innerHTML=`<i class="fas fa-cloud-sun"></i>`;
-        }
+        console.log(temp_status);
+        
+        
+        // console.log(temp_status=="Mist");
         // temp.innerHTML=arrdata[0].main.temp;
         }catch{
             outputcityName.innerHTML=`Enter City name properly`;
@@ -74,3 +71,13 @@ const getInfo=async(event)=>{
 }
 btm.addEventListener('click',getInfo);
 
+// function autocomplete(inp,arr){
+//     var currfo;
+//     inp.addEventListener("input",function(e){
+//         //var declaration
+
+//         closeAllLists();
+
+//     })
+
+// }

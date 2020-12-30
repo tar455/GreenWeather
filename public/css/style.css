@@ -112,6 +112,36 @@ footer{
     justify-content: center;
 
 }
+/* Error page  */
+.imgdef #errpage{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    margin-left: 45rem;
+    margin-right: 10rem;
+    
+}
+
+.imgdef #btnval{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px;
+    color: var(--main-color);
+    background-color: var(--main-bg);
+    outline:none;
+    margin: 15rem 60rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.imgdef #Errtext{
+    font-size: 2rem;
+    margin: 2rem 50rem;
+    margin-left: 55rem;
+}
+
+
 /*Weather Page Search Box*/
 
 
@@ -210,8 +240,10 @@ sup{
     font-size: 6rem;
     margin-top: -2rem;
 }
-
-
+.autocomplete{
+    position: relative;
+    display:inline-block;
+}
 /*footer style*/
 footer{
     width: 100%;

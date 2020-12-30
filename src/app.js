@@ -29,9 +29,12 @@ app.get('/about',(req,res)=>{
 app.get('/weather',(req,res)=>{
     res.render('weather.ejs',{list:"lists"})
 })
-// app.get('*',(req,res)=>{
-//     res.send("404 not found");
-// })
+app.get('/prediction',(req,res)=>{
+    res.render('prediction.ejs');
+})
+app.get('*',(req,res)=>{
+     res.render('404Error.ejs');
+})
 
 app.listen(port,()=>{
     console.log(`Server running ${port}`);
