@@ -59,7 +59,7 @@ html{
 }
 
 .main_header{
-    margin: 2%;
+    margin: 0%;
 }
 footer{
     padding: 2rem;
@@ -114,12 +114,17 @@ footer{
 }
 /* Error page  */
 .imgdef #errpage{
-    margin-top: 3rem;
+    /* margin-top: 3rem;
     margin-bottom: 5rem;
     margin-left: 45rem;
     margin-right: 10rem;
-    
-}
+     */
+    padding-top: 0%;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+    padding-right: 12rem;
+
+} 
 
 .imgdef #btnval{
     border: none;
@@ -131,14 +136,15 @@ footer{
     color: var(--main-color);
     background-color: var(--main-bg);
     outline:none;
-    margin: 15rem 60rem;
+    margin-left: 10rem;
+    /* margin: 15rem 60rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; */
 }
 .imgdef #Errtext{
     font-size: 2rem;
-    margin: 2rem 50rem;
-    margin-left: 55rem;
+    margin-left: 5rem;
+    
 }
 
 
