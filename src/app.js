@@ -1,7 +1,14 @@
+
+const connection=require("../models/connection");
 const express=require('express');
 const path= require('path');
 const app=express();
+const mongoose=require('mongoose');
 const ejs=require('ejs');
+
+// var db=mongoose.connection=()=>{
+//     console.log("DAta base server connected");
+// };
 const port=process.env.PORT ||3000;
 
 
