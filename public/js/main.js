@@ -1,3 +1,5 @@
+// const e = require("express");
+
 const btm=document.getElementById('search_btm');
 const cityName=document.getElementById('cityName');
 const outputcityName=document.getElementById('city_name');
@@ -30,7 +32,7 @@ month[11]="Dec";
 var n=weekday[d.getDay()];
 var da=d.getDate();
 var mo=month[d.getMonth()];
-day.innerHTML=n;
+day.innerHTML= n+"";
 date.innerHTML=da+" "+mo;
 const getInfo=async(event)=>{
     event.preventDefault();
@@ -81,5 +83,4 @@ btm.addEventListener('click',getInfo);
 //     })
 
 // }
-
 

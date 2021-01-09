@@ -268,7 +268,41 @@ footer p{
 footer span{
     padding: 1rem 0;
 }
+/* Login page form */
 
+.form-control{
+    /* margin-top: 5rem;
+    /* margin-left: 2rem; */
+    /* margin-right: 3rem; 
+    margin-bottom: 2rem;
+    padding: 15rem 14rem 18rem; */
+    /* line-height: 6rem; */
+    position: relative;
+    /* width: 50rem; */
+    margin: 10rem auto 6rem;
+    margin-right: 5rem;
+    background-color:#323544; 
+}
+.form-control #UserName,#UserPassword{
+    border-radius: 1rem;
+    width: 17rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    padding-bottom: 0.2rem;
+    font-size: 2rem;
+    font-weight:bold;
+    outline: none;
+    
+    /* padding-left: 2rem; */
+}
+.form-control span{
+    color: #fff;
+    font-size: 2rem;
+}
+.form-control button{
+    position: relative;
+    margin: 1rem 0;
+}
 
 @media(max-width: 768px){
    .main_header_left{

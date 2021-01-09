@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const { error } = require('console');
-var mongoDB = 'mongodb://127.0.0.1/admin';
+var mongoDB = 'mongodb://127.0.0.1/GreenWeather';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},(error)=>{
     if(!error){
         console.log("server connected");
@@ -8,4 +8,6 @@ mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},(err
     else{
         console.log("Error to connect:",error);
     }
-})
+});
+
+const UserData= require('./UserData')

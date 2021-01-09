@@ -1,11 +1,10 @@
-
-const connection=require("../models/connection");
+const connection=require("../model/connection");
 const express=require('express');
 const path= require('path');
 const app=express();
 const mongoose=require('mongoose');
 const ejs=require('ejs');
-
+const UserDatareq= require('../controller/Login')
 // var db=mongoose.connection=()=>{
 //     console.log("DAta base server connected");
 // };
@@ -24,7 +23,7 @@ app.set('views',staptah);
 //app.set('views',staptah);
 // Set HTML engine**
 
-
+app.use('/Login-Page',UserDatareq);
 //app.engine('html', require('ejs').renderFile);
 app.get('/',(req,res)=>{
     res.render('index.ejs',{list:"lists"})
@@ -38,6 +37,9 @@ app.get('/weather',(req,res)=>{
 })
 app.get('/prediction',(req,res)=>{
     res.render('prediction.ejs');
+});
+app.get('/Login',(req,res)=>{
+    res.render('Login-page.ejs');
 })
 app.get('*',(req,res)=>{
      res.render('404Error.ejs');
