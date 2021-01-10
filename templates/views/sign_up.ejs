@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenWeather</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="../images/weather-2.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="container-fluid main_menu">
+        <div class="row">
+            <div class="col-md-9 col-12 mx-auto">
+             <nav class="navbar navbar-expand-lg">
+                 <a class="navbar-brand mx-auto" href="#" ><i class="fas fa-snowflake"></i> GreenWeather <i class="fas fa-snowflake"></i></a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div  class="col-md-7 col-12 mx-auto">
+        <form class="form-control">
+          <span>UserName:</span>:</span> <label for="UserPassword"></label><input type="text"  id="UserName" placeholder="Enter your username"></label> <br>
+          <!-- <label for="UserName"> -->
+          <label for="UserPassword"><span>Email: <input type="email" id="Email" placeholder="Enter your Email"> </span></label>  
+          <br>
+          <span>Password:</span> <input type="password" id="UserPassword" placeholder="Enter your password">
+          <!-- </label> -->
+          <!-- <br>
+          <input type="checkbox"  id="check">
+          
+          <span>Show Password</span>
+          <br>
+          <input type="checkbox" id="terms"> <span>Accept <a href="#">Terms and Conditions</a></span>
+          <br> -->
+          <br>
+          <span>confirmPassword</span><input type="password" id="confirmPassword" placeholder="Enter confirm password">
+          <br>
+          <input type="checkbox"  id="check"><span> Show password</span>
+          <br>
+          <button type="submit" class="btn btn-primary" id="logbtn">Sign up</button>
+          <br>
+          <span>If Already have an Account please<a href="/Login"> Login</a></span>
+        </form>
+             
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>created with 💕<br>
+     <span>Copy Right 2019 <i class="far fa-copyright"></i></span> 
+    </p>
+ </footer>
+
+</body>
+<script>
+  const check=document.getElementById('check');
+const inp=document.getElementById('UserPassword');
+const inp2=document.getElementById('confirmPassword');
+const my_fun=(event)=>{
+  if(inp.type==="password" && inp2.type==="password"){
+    inp.type="text";
+    inp2.type="text";
+  }
+  else{
+    inp.type="password";
+    inp2.type="password";
+  }
+}
+check.addEventListener("click",my_fun);
+</script>
+</html>

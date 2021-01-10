@@ -41,6 +41,9 @@ app.get('/prediction',(req,res)=>{
 app.get('/Login',(req,res)=>{
     res.render('Login-page.ejs');
 })
+app.get('/signup',(req,res)=>{
+    res.render('sign_up.ejs');
+})
 app.get('*',(req,res)=>{
      res.render('404Error.ejs');
 })

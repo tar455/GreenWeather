@@ -57,7 +57,12 @@
                 
                 <span>Show Password</span>
                 <br>
+                <input type="checkbox" id="terms"> <span>Accept <a href="#">Terms and Conditions</a></span>
+                <br>
+
                 <button type="submit" class="btn btn-primary" id="logbtn">Login</button>
+                <br>
+                <span>If not have an Account <a href="/signup">Sign Up</a></span>
               </form>
                    
             </div>
@@ -69,20 +74,30 @@
      <span>Copy Right 2019 <i class="far fa-copyright"></i></span> 
     </p>
  </footer>   
- <script >
-   const checkPass=document.getElementById('check');
+    
+</body>
+<script >
+  const checkPass=document.getElementById('check');
 const myFun=(event)=>{
-    var inp=document.getElementById('UserPassword');
-    if(inp.type==="password"){
-        inp.type="text";
-    }
-    else{
-        inp.type="password";
-    }
+   var inp=document.getElementById('UserPassword');
+   if(inp.type==="password"){
+       inp.type="text";
+   }
+   else{
+       inp.type="password";
+   }
 }
 checkPass.addEventListener('click',myFun);
+const terms=document.getElementById("terms");
+const Accept_term=(event)=>{
+ if(terms==true){
+    
+ }
+ else{
 
+ }
+}
 
- </script>   
-</body>
+terms.addEventListener("click",Accept_term);
+</script>
 </html>
