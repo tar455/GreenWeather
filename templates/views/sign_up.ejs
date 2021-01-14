@@ -27,12 +27,13 @@
 <div class="container">
     <div class="row">
       <div  class="col-md-7 col-12 mx-auto">
-        <form class="form-control">
-          <span>UserName:</span>:</span> <label for="UserPassword"></label><input type="text"  id="UserName" placeholder="Enter your username"></label> <br>
+        <form action="/Login-page/signup" method="post" class="form-control">
+          <span>FullName:</span>:</span> <label for="UserName"></label>
+          <input type="text"  id="UserName" value="" name="UserName" placeholder="Enter your FullName"></label> <br>
           <!-- <label for="UserName"> -->
-          <label for="UserPassword"><span>Email: <input type="email" id="Email" placeholder="Enter your Email"> </span></label>  
+          <label for="UserPassword"><span>Email: <input type="email" id="Email" value="" name="Email_id" placeholder="Enter your Email"> </span></label>  
           <br>
-          <span>Password:</span> <input type="password" id="UserPassword" placeholder="Enter your password">
+          <span>Password:</span> <input type="password" id="UserPassword" value="" name="Password" placeholder="Enter your password">
           <!-- </label> -->
           <!-- <br>
           <input type="checkbox"  id="check">
@@ -42,7 +43,7 @@
           <input type="checkbox" id="terms"> <span>Accept <a href="#">Terms and Conditions</a></span>
           <br> -->
           <br>
-          <span>confirmPassword</span><input type="password" id="confirmPassword" placeholder="Enter confirm password">
+          <span>confirmPassword</span><input type="password"name="confirm_pass" value=""  id="confirmPassword" placeholder="Enter confirm password">
           <br>
           <input type="checkbox"  id="check"><span> Show password</span>
           <br>
@@ -69,10 +70,12 @@ const my_fun=(event)=>{
   if(inp.type==="password" && inp2.type==="password"){
     inp.type="text";
     inp2.type="text";
-  }
+   
+    }
   else{
     inp.type="password";
     inp2.type="password";
+  
   }
 }
 check.addEventListener("click",my_fun);

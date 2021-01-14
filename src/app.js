@@ -23,7 +23,7 @@ app.set('views',staptah);
 //app.set('views',staptah);
 // Set HTML engine**
 
-app.use('/Login-Page',UserDatareq);
+
 //app.engine('html', require('ejs').renderFile);
 app.get('/',(req,res)=>{
     res.render('index.ejs',{list:"lists"})
@@ -41,13 +41,13 @@ app.get('/prediction',(req,res)=>{
 app.get('/Login',(req,res)=>{
     res.render('Login-page.ejs');
 })
-app.get('/signup',(req,res)=>{
-    res.render('sign_up.ejs');
-})
+app.listen(port,()=>{
+    console.log(`Server running ${port}`);
+});
+
+app.use('/Login-Page',UserDatareq);
+
 app.get('*',(req,res)=>{
      res.render('404Error.ejs');
 })
 
-app.listen(port,()=>{
-    console.log(`Server running ${port}`);
-});
