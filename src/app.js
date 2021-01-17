@@ -38,9 +38,9 @@ app.get('/weather',(req,res)=>{
 app.get('/prediction',(req,res)=>{
     res.render('prediction.ejs');
 });
-app.get('/Login',(req,res)=>{
-    res.render('Login-page.ejs');
-})
+// app.get('/Login',(req,res)=>{
+//     res.render('Login-page.ejs');
+// })
 app.listen(port,()=>{
     console.log(`Server running ${port}`);
 });

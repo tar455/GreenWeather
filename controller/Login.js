@@ -14,17 +14,30 @@ router.get('/signup',(req,res)=>{
 })
 
 router.get('/Login',(req, res)=>{
+    res.render('Login-page.ejs');
+    // UserDatamodel.find((err,docs)=>{
+    //     console.log(req.body)
+    //     if(!err){
+    //         console.log(docs);
+    //         res.send('hii');
+    //     }
+    //     else{
+    //         res.send('error');
+    //     }
+    // })
+    
+});
+router.post('/Login',(req, res)=>{
     UserDatamodel.find((err,docs)=>{
-        console.log(req.body)
+        // console.log(req.body.UserName);
         if(!err){
-            console.log(docs);
-            res.send('hii');
+            res.redirect('index.ejs');
         }
         else{
-            res.send('error');
+            console.log(err);
         }
     })
-});
+})
 router.post('/signup',(req,res)=>{
     data=new UserDatamodel();
     data.first_name=req.body.UserName;
@@ -33,13 +46,15 @@ router.post('/signup',(req,res)=>{
     data.con_password=req.body.confirm_pass;
     if(data.save()){
     console.log("save successfully");
+    res.redirect('/Login-Page/start');
     }
     else{
         console.log("Failed to sign Up");
     }
-    res.redirect('/Login-Page/start');
+    
 });
 router.get('/start',(req,res)=>{
     res.render('index.ejs');
 })
 module.exports=router;
+

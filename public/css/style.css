@@ -112,6 +112,10 @@ footer{
     justify-content: center;
 
 }
+span #mando{
+    color: red;
+}
+
 /* Error page  */
 .imgdef #errpage{
     /* margin-top: 3rem;
@@ -285,7 +289,7 @@ footer span{
     /* padding: 0.8rem 0.9; */
     background-color:#323544; 
 }
-.form-control #UserName,#Email,#confirmPassword{
+.form-control #UserName,#Email{
     border-radius: 1rem;
     width: 17rem;
     margin-left: 0rem;
@@ -297,9 +301,9 @@ footer span{
     
     /* padding-left: 2rem; */
 }
-.form-control #UserPassword{
+.form-control #UserPassword,#confirmPassword{
     border-radius: 1rem;
-    width:  170px;
+    width:  17rem;
     margin-left: 1rem;
     margin-right: 1rem;
     padding-bottom: 0.2rem;
@@ -310,8 +314,13 @@ footer span{
 }
 .form-control span{
     color: #fff;
-    font-size: 2rem;
+    font-size: 15px;
     margin-top: 2rem;
+}
+span #sidemsg
+{
+    color: green;
+    font-size: 10px;
 }
 .form-control button{
     position: relative;
