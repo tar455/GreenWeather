@@ -301,6 +301,7 @@ footer span{
     
     /* padding-left: 2rem; */
 }
+
 .form-control #UserPassword,#confirmPassword{
     border-radius: 1rem;
     width:  17rem;
@@ -328,6 +329,10 @@ span #sidemsg
     padding: 1.5rem 3rem;
     border-radius: 2rem;
     font-size:1.8rem;
+}
+span #predict
+{
+    font-size:5rem;
 }
 
 @media(max-width: 768px){
