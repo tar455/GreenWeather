@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 const express=require('express');
 var bodyParser=require('body-parser');
+const validator=require('validator');
 const router=express.Router();
 const UserDatamodel=mongoose.model('UserData');
 
@@ -15,38 +16,14 @@ router.get('/signup',(req,res)=>{
 
 router.get('/Login',(req, res)=>{
     res.render('Login-page.ejs');
-    // UserDatamodel.find((err,docs)=>{
-    //     console.log(req.body)
-    //     if(!err){
-    //         console.log(docs);
-    //         res.send('hii');
-    //     }
-    //     else{
-    //         res.send('error');
-    //     }
-    // })
-    
 });
 router.post('/Login',(req, res)=>{
-    // UserDatamodel.find((err,docs)=>{
-    //     // console.log(req.body.UserName);
-    //     if(!err){
-    //         res.redirect('index.ejs');
-    //     }
-    //     else{
-    //         console.log(err);
-    //     }
-    // })
-    // console.log(req.body);
     data=new UserDatamodel();
-    UserDatamodel.find({
-        // 'email':req.body.UserName,
-        // 'password':req.body.Password
-    },function(err,result){
+    UserDatamodel.find({},function(err,result){
         if(!err){
             var count=result.length;
             var flag=0;
-            for(var i=0;i<count;i++){
+            for(var i=0;i<count;i++){   //for making array
                 if(result[i].email==req.body.UserName &&  result[i].password==req.body.Password)
                 {
                     flag=1;
@@ -76,6 +53,9 @@ router.post('/signup',(req,res)=>{
     data=new UserDatamodel();
     data.first_name=req.body.UserName;
     data.email=req.body.Email_id;
+    if(req.body.Email_id==""){
+        console.log("Please Enter Email Id");
+    }
     data.password=req.body.Password;
     data.con_password=req.body.confirm_pass;
     if(data.save()){
