@@ -1,5 +1,3 @@
-// const e = require("express");
-
 const btm=document.getElementById('search_btm');
 const cityName=document.getElementById('cityName');
 const outputcityName=document.getElementById('city_name');
@@ -73,14 +71,4 @@ const getInfo=async(event)=>{
 }
 btm.addEventListener('click',getInfo);
 
-// function autocomplete(inp,arr){
-//     var currfo;
-//     inp.addEventListener("input",function(e){
-//         //var declaration
-
-//         closeAllLists();
-
-//     })
-
-// }
 

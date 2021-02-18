@@ -118,11 +118,6 @@ span #mando{
 
 /* Error page  */
 .imgdef #errpage{
-    /* margin-top: 3rem;
-    margin-bottom: 5rem;
-    margin-left: 45rem;
-    margin-right: 10rem;
-     */
     padding-top: 0%;
     padding-left: 5rem;
     padding-bottom: 3rem;
@@ -141,9 +136,6 @@ span #mando{
     background-color: var(--main-bg);
     outline:none;
     margin-left: 10rem;
-    /* margin: 15rem 60rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem; */
 }
 .imgdef #Errtext{
     font-size: 2rem;
@@ -242,10 +234,6 @@ span #mando{
 .fas{
     color: var(--main-color );
 }
-/* .data_hide{ */
-    /* visibility: hidden; */
-    /* transition: all 0.3 linear; */
-/* } */
 sup{
     font-size: 6rem;
     margin-top: -2rem;
@@ -275,12 +263,6 @@ footer span{
 /* Login page form */
 
 .form-control{
-    /* margin-top: 5rem;
-    /* margin-left: 2rem; */
-    /* margin-right: 3rem; 
-    margin-bottom: 2rem;
-    padding: 15rem 14rem 18rem; */
-    /* line-height: 6rem; */
     position: relative;
     /* width: 50rem; */
     margin: 10rem auto 6rem;

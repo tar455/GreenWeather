@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const { error } = require('console');
 var mongoDB = 'mongodb://127.0.0.1/GreenWeather';
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},(error)=>{
+mongoose.connect(process.env.MONGODB_URL || mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},(error)=>{
     if(!error){
         console.log("server connected");
     }
@@ -10,4 +10,4 @@ mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},(err
     }
 });
 
-const UserData= require('./UserData')
+const UserData= require('./UserData');
