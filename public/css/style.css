@@ -155,7 +155,7 @@ span #mando{
 }
 
 .temp_form{
-    width: 60%;
+    width: auto;
     position: relative;
     margin: 10rem auto 6rem;
 }
@@ -185,13 +185,16 @@ span #mando{
     background-color:#323544;
 }
 .temp-info{
-    width: 40rem;
-    margin: auto;
+    /* width: 40rem; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
     min-height: 20rem;
     /* padding: 1rem; */
     background-color: #323544;
     border-radius: 1rem;
     font-family: "roboto",sans-serif;
+    width: 40rem;
     
 }
 .top-layer{
