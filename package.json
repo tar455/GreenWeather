@@ -15,7 +15,8 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
-    "mongoose": "^5.11.10",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.15",
     "nodemon": "^2.0.6",
     "validator": "^13.5.2"
   }

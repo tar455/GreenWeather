@@ -2,10 +2,13 @@ const mongoose=require('mongoose');
 const express=require('express');
 var bodyParser=require('body-parser');
 const validator=require('validator');
+require('../model/UserData')
 const router=express.Router();
 const UserDatamodel=mongoose.model('UserData');
-
+// require('../model/connection')
 router.use(bodyParser.urlencoded({ extended: false }))
+data=new UserDatamodel();
+
 
 // parse application/json
 router.use(bodyParser.json())
@@ -18,7 +21,6 @@ router.get('/Login',(req, res)=>{
     res.render('Login-page.ejs');
 });
 router.post('/Login',(req, res)=>{
-    data=new UserDatamodel();
     UserDatamodel.find({},function(err,result){
         if(!err){
             var count=result.length;
@@ -59,13 +61,16 @@ router.post('/signup',(req,res)=>{
     data.password=req.body.Password;
     data.con_password=req.body.confirm_pass;
     if(data.save()){
-    console.log("save successfully");
-    res.redirect('/Login-Page/Login');
-    }
-    else{
-        console.log("Failed to sign Up");
-    }
-    
+                    console.log("save successfully");
+                    res.redirect('/Login-Page/Login');
+        // mongoose.connection.close();
+                }
+        else
+        {
+            alert('something went wrong');
+            console.log("Failed to sign Up");
+            res.redirect('/Login-Page/signup')
+        }
 });
 router.get('/start',(req,res)=>{
     res.render('index.ejs');
