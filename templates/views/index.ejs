@@ -6,7 +6,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://greenweather.herokapp.com/",
-        "@type": "Weather Information",
+        "@type": "Forecast",
         "name": "Green Weather",
         "author": {
           "@type": "Person",
@@ -101,6 +101,24 @@
      </div>
    </div>
    <!--footer code -->
+   <div class="privacy-policy-banner">
+    <div class="banner-body">
+      <p>
+        we have updated our 
+        <a href="/termsAndCondition">
+          privacy policy
+        </a>
+        and
+        <a href="">
+          cookies Policy
+        </a>
+
+      </p>
+      <div class="banner-button policy-accept">
+        <a id="cookies-policy" href="javascript:CookieScript.instance.acceptAllAction()">I Understand</a>
+      </div>
+    </div>
+   </div>
 
    <footer>
       <p>created with 💕 By Md Tarique Ansari<br>
@@ -108,4 +126,11 @@
       </p>
    </footer>   
 </body>
+<script>
+  const ck=document.getElementById('cookies-policy');
+  if(ck.instance.acceptAllAction())
+  {
+    
+  }
+</script>
 </html>

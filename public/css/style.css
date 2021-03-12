@@ -319,6 +319,41 @@ span #predict
 {
     font-size:5rem;
 }
+/* Privacy policy  */
+.privacy-policy-banner
+{
+    position: fixed;
+    border-radius: 8px;
+    background-color: var(--main-bg);
+    color: #fff;
+    padding: 16px;
+    bottom: 10px;
+    position: relative;
+    height:100%;
+    width: 100%;
+    z-index: 2127483600;
+    font: size 20px;
+}
+.privacy-policy-banner,.banner-body {
+    padding: 16px;
+    position: relative;
+    height:100%;
+    width: 100%;
+}
+.banner-button
+{
+    font-size:  16px;
+    cursor: pointer;
+    background-color: #fff;
+    padding-top: 11px;
+    padding: bottom 11px;
+    padding-left: 0;
+    padding-right:0;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
 
 @media(max-width: 768px){
    .main_header_left{
