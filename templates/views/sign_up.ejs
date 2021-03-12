@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenWeather</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="../images/weather-2.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="container-fluid main_menu">
+        <div class="row">
+            <div class="col-md-9 col-12 mx-auto">
+             <nav class="navbar navbar-expand-lg">
+                 <a class="navbar-brand mx-auto" href="#" ><i class="fas fa-snowflake"></i> GreenWeather <i class="fas fa-snowflake"></i></a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div  class="col-md-7 col-12 mx-auto">
+        <form action="/Login-page/signup" method="post" class="form-control">
+          <span id="subhead">FullName:<span id="mando">*</span>
+          <label for="Email">
+          <input type="text"  id="UserName" value="" name="UserName" placeholder="Enter your FullName"></label>
+          <label for="Email"><span id="sidemsg">Please Enter FullName</span> </span></label>  
+          <br>
+          <!-- <label for="UserName"> -->
+          <span id="subhead">Email:<span id="mando">*</span>
+          <label for="UserPassword">
+          <input type="email" id="Email" value="" name="Email_id" placeholder="Enter your Email">
+          <span id="sidemsg">Please Enter correct Email</span> </span></label>
+          
+          <br>
+          <span id="subhead">Password:<span id="mando">*</span> 
+          <label for="confirmPassword">
+          <input type="password" id="UserPassword" value="" name="Password" min="8" max="15" placeholder="Enter your password">
+          <span id="sidemsg2">Please make a password</span>
+        </span>
+          </label>
+          <br>
+          <span id="subhead">Re Password:<span id="mando">*</span>
+          <label for="check">
+          <input type="password"name="confirm_pass" value=""  id="confirmPassword" placeholder="Enter confirm password">
+          <span id="sidemsg3">confirm password</span>
+          </label>
+          <br>
+          <input type="checkbox"  id="check"><span> Show password</span>
+          <br>
+          <button type="submit" class="btn btn-primary"onclick="match()" id="logbtn">Sign up</button>
+          <br>
+          <span>If Already have an Account please<a href="/Login-Page/Login"> Login</a></span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>created with 💕By Tarique Ansari<br>
+     <span>Copy Right 2021 <i class="far fa-copyright"></i></span> 
+    </p>
+ </footer>
+
+</body>
+<script>
+  const check=document.getElementById('check');
+const inp=document.getElementById('UserPassword');
+const inp2=document.getElementById('confirmPassword');
+const msg=document.getElementById('sidemsg2');
+const msg2=document.getElementById('sidemsg3');
+function match(){
+  const Email=document.getElementById('Email')
+
+if(inp.value=="")
+{
+    msg.innerHTML="Please Enter password";
+    msg="";
+}
+if(inp2.value=="")
+{
+    msg2.innerHTML="please Enter Confirm password";
+    msg2="";
+}
+if(inp.length<8 || inp.length>15){
+    msg.innerHTML="Please Password must be 8 to 15 character";
+    msg='';
+}
+if(inp.value===inp2.value)
+{
+    msg.innerHTML='password Match';
+    msg2.innerText='Password Match';
+    msg.style.color='green';
+    msg2.style.color='green';
+}
+else
+{
+    msg.innerHTML='password Not Match';
+    msg2.innerText='Password Not Match';
+    msg.style.color='red';
+    msg2.style.color='red';
+    alert('Password Not Match');
+}
+}
+const my_fun=(event)=>{
+  if(inp.type==="password" && inp2.type==="password"){
+    inp.type="text";
+    inp2.type="text";
+   
+    }
+  else{
+    inp.type="password";
+    inp2.type="password";
+  
+  }
+}
+check.addEventListener("click",my_fun);
+</script>
+</html>

@@ -59,7 +59,7 @@ html{
 }
 
 .main_header{
-    margin: 2%;
+    margin: 0%;
 }
 footer{
     padding: 2rem;
@@ -112,14 +112,18 @@ footer{
     justify-content: center;
 
 }
+span #mando{
+    color: red;
+}
+
 /* Error page  */
 .imgdef #errpage{
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-    margin-left: 45rem;
-    margin-right: 10rem;
-    
-}
+    padding-top: 0%;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+    padding-right: 12rem;
+
+} 
 
 .imgdef #btnval{
     border: none;
@@ -131,14 +135,12 @@ footer{
     color: var(--main-color);
     background-color: var(--main-bg);
     outline:none;
-    margin: 15rem 60rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 10rem;
 }
 .imgdef #Errtext{
     font-size: 2rem;
-    margin: 2rem 50rem;
-    margin-left: 55rem;
+    margin-left: 5rem;
+    
 }
 
 
@@ -153,7 +155,7 @@ footer{
 }
 
 .temp_form{
-    width: 60%;
+    width: auto;
     position: relative;
     margin: 10rem auto 6rem;
 }
@@ -183,13 +185,16 @@ footer{
     background-color:#323544;
 }
 .temp-info{
-    width: 40rem;
-    margin: auto;
+    /* width: 40rem; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
     min-height: 20rem;
     /* padding: 1rem; */
     background-color: #323544;
     border-radius: 1rem;
     font-family: "roboto",sans-serif;
+    width: 40rem;
     
 }
 .top-layer{
@@ -232,10 +237,6 @@ footer{
 .fas{
     color: var(--main-color );
 }
-/* .data_hide{ */
-    /* visibility: hidden; */
-    /* transition: all 0.3 linear; */
-/* } */
 sup{
     font-size: 6rem;
     margin-top: -2rem;
@@ -261,6 +262,96 @@ footer p{
 }
 footer span{
     padding: 1rem 0;
+}
+/* Login page form */
+
+.form-control{
+    position: relative;
+    /* width: 50rem; */
+    margin: 10rem auto 6rem;
+    margin-right: 5rem;
+    padding-bottom: 5rem;
+    /* padding: 0.8rem 0.9; */
+    background-color:#323544; 
+}
+.form-control #UserName,#Email{
+    border-radius: 1rem;
+    width: 17rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    padding-bottom: 0.2rem;
+    font-size: 2rem;
+    font-weight:bold;
+    outline: none;
+    
+    /* padding-left: 2rem; */
+}
+
+.form-control #UserPassword,#confirmPassword{
+    border-radius: 1rem;
+    width:  17rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 0.2rem;
+    font-size: 2rem;
+    font-weight:bold;
+    outline: none;
+    
+}
+.form-control span{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 2rem;
+}
+span #sidemsg
+{
+    color: green;
+    font-size: 10px;
+}
+.form-control button{
+    position: relative;
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    font-size:1.8rem;
+}
+span #predict
+{
+    font-size:5rem;
+}
+/* Privacy policy  */
+.privacy-policy-banner
+{
+    position: fixed;
+    border-radius: 8px;
+    background-color: var(--main-bg);
+    color: #fff;
+    padding: 16px;
+    bottom: 10px;
+    position: relative;
+    height:100%;
+    width: 100%;
+    z-index: 2127483600;
+    font: size 20px;
+}
+.privacy-policy-banner,.banner-body {
+    padding: 16px;
+    position: relative;
+    height:100%;
+    width: 100%;
+}
+.banner-button
+{
+    font-size:  16px;
+    cursor: pointer;
+    background-color: #fff;
+    padding-top: 11px;
+    padding: bottom 11px;
+    padding-left: 0;
+    padding-right:0;
+    text-align: center;
+    position: relative;
+    top: 10px;
 }
 
 

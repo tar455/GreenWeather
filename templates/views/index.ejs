@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+      {
+        "@context": "https://greenweather.herokapp.com/",
+        "@type": "Forecast",
+        "name": "Green Weather",
+        "author": {
+          "@type": "Person",
+          "name": "Md Tarique Ansari"
+        },
+        "datePublished": "2021-02-28",
+        "description": "Best website for weather information.",
+        "prepTime": "PT20M"
+      }
+    </script>
     <title>GreenWeather</title>
     <!-- CSS only -->
+    <script data-ad-client="ca-pub-3889512996263313" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -19,7 +34,7 @@
     <div class="row">
         <div class="col-md-9 col-12 mx-auto">
          <nav class="navbar navbar-expand-lg">
-             <a class="navbar-brand" href="#"><i class="fas fa-snowflake"></i> GreenWeather<i class="fas fa-snowflake"></i></a>
+             <a class="navbar-brand" href="/"><i class="fas fa-snowflake"></i> GreenWeather<i class="fas fa-snowflake"></i></a>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
@@ -38,7 +53,7 @@
                    <a class="nav-link" href="/about">about</a>
                  </li>
                </ul>
-                   <a href="/profile"> <i class="fas fa-user"></i></a>
+                   <a href="/Login-page/Login" id="profile"> <i class="fas fa-user"></i></a>
              </div>
            </nav>
           
@@ -51,6 +66,7 @@
        <div class="col-md-9 col-12 mx-auto">
          <div class="row">
            <div class="col-md-6 col-12 main_header_left">
+             <p id="UserName"></p>
              <p>Welcome to GreenWeather App</p>
              <h1>Get the latest <span>Weather</span> info of your city</h1>
              <a href="/weather"><button class="btncheack">check now</button></a>
@@ -85,10 +101,36 @@
      </div>
    </div>
    <!--footer code -->
+   <div class="privacy-policy-banner">
+    <div class="banner-body">
+      <p>
+        we have updated our 
+        <a href="/termsAndCondition">
+          privacy policy
+        </a>
+        and
+        <a href="">
+          cookies Policy
+        </a>
+
+      </p>
+      <div class="banner-button policy-accept">
+        <a id="cookies-policy" href="javascript:CookieScript.instance.acceptAllAction()">I Understand</a>
+      </div>
+    </div>
+   </div>
+
    <footer>
-      <p>created with 💕<br>
-       <span>Copy Right 2019 <i class="far fa-copyright"></i></span> 
+      <p>created with 💕 By Md Tarique Ansari<br>
+       <span>Copy Right 2021 <i class="far fa-copyright"></i></span> 
       </p>
    </footer>   
 </body>
+<script>
+  const ck=document.getElementById('cookies-policy');
+  if(ck.instance.acceptAllAction())
+  {
+    
+  }
+</script>
 </html>

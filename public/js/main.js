@@ -30,7 +30,7 @@ month[11]="Dec";
 var n=weekday[d.getDay()];
 var da=d.getDate();
 var mo=month[d.getMonth()];
-day.innerHTML=n;
+day.innerHTML= n+"";
 date.innerHTML=da+" "+mo;
 const getInfo=async(event)=>{
     event.preventDefault();
@@ -71,13 +71,4 @@ const getInfo=async(event)=>{
 }
 btm.addEventListener('click',getInfo);
 
-// function autocomplete(inp,arr){
-//     var currfo;
-//     inp.addEventListener("input",function(e){
-//         //var declaration
 
-//         closeAllLists();
-
-//     })
-
-// }

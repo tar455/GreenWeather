@@ -12,14 +12,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="../images/weather-2.jpg" type="image/jpg">
 </head>
 <body>
     <div class="container-fluid main_menu">
         <div class="row">
             <div class="col-md-9 col-12 mx-auto">
              <nav class="navbar navbar-expand-lg">
-                 <a class="navbar-brand" href="/"><i class="fas fa-snowflake"></i> GreenWeather<i class="fas fa-snowflake"></i></a>
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <a class="navbar-brand mx-auto" href="#" ><i class="fas fa-snowflake"></i> GreenWeather <i class="fas fa-snowflake"></i></a>
+                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                    <span class="navbar-toggler-icon"></span>
                  </button>
                  <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,32 +38,66 @@
                        <a class="nav-link" href="/about">about</a>
                      </li>
                    </ul>
-                       <a href="/Login"> <i class="fas fa-user"></i></a>
-                 </div>
+                       <a href="/profile" id="profile"> <i class="fas fa-user"></i></a>
+                 </div> -->
                </nav>
-              
-            </div>
-    
         </div>
     </div>
-    <div class="container-fluid main_header">
-        <div class="row">
-            <div class="col-md-3 col-12 mx-auto">
-                <div class="imgdef">
-                <img id="errpage" src="/images/404Error.png" alt="" width="400px" height="400px">
-                <p id="Errtext">Page Not Found Error</p>
-                <a href="/"><button type="button" id="btnval" >Go Back</button></a>
-            </div>
-            </div>
-        </div>
     </div>
+        <div class="container">
+          <div class="row">
+            <div  class="col-md-7 col-12 mx-auto">
+              <form class="form-control" action="/Login-Page/Login" method="POST">
+                <span>UserName:</span> <label for="UserPassword"></label><input type="text" name="UserName" value=""  id="UserName" placeholder="Enter your Email"></label> <br>
+                <!-- <label for="UserName"> -->
+                <span>Password:</span> <input type="password" name="Password" value="" id="UserPassword" placeholder="Enter your password">
+                <!-- </label> -->
+                <br>
+                <input type="checkbox"  id="check">
+                
+                <span>Show Password</span>
+                <br>
+                <input type="checkbox" id="terms"> <span>Accept <a href="/termsAndCondition">Terms and Conditions</a></span>
+                <br>
 
-    <!--footer code -->
+                <button type="submit" class="btn btn-primary" id="logbtn">Login</button>
+                <br>
+                <span>If not have an Account <a href="/Login-page/signup">Sign Up</a></span>
+              </form>
+                   
+            </div>
+          </div>
+        </div>
+      <!--footer code -->
    <footer>
     <p>created with 💕By Tarique Ansari<br>
      <span>Copy Right 2021 <i class="far fa-copyright"></i></span> 
     </p>
- </footer>
-
+ </footer>   
+    
 </body>
+<script >
+  const checkPass=document.getElementById('check');
+const myFun=(event)=>{
+   var inp=document.getElementById('UserPassword');
+   if(inp.type==="password"){
+       inp.type="text";
+   }
+   else{
+       inp.type="password";
+   }
+}
+checkPass.addEventListener('click',myFun);
+const terms=document.getElementById("terms");
+const Accept_term=(event)=>{
+ if(terms==true){
+    
+ }
+ else{
+
+ }
+}
+
+terms.addEventListener("click",Accept_term);
+</script>
 </html>
